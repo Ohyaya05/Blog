@@ -54,17 +54,41 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<h1 class="title mb-6">Notes !</h1>
 		<p class="mb-4">PPG Prajabatan 2024</p>
 		<SocialList />
 	</section>
-	<section aria-label="Blog post list" class="mt-16">
-		<h2 class="title mb-4 text-xl">Posts</h2>
+	<section>
+		<div role="status" class="h2 max-w-sm animate-pulse">
+			<h2 class="title mb-4 text-xl font-bold text-blue-600">Reminder</h2>
+			<div
+				class="mb-4 h-2.5 w-48 rounded-full bg-gray-200 text-center text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-300"
+			>
+				Layaknya Seorang Lelaki
+			</div>
+			<div
+				class="mb-2.5 h-2 max-w-[360px] rounded-full bg-gray-200 text-center text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-300"
+			>
+				berjuanglah <span class="font-semibold text-red-600">Sehancur-hancurnya</span>
+			</div>
+			<div
+				class="mb-2.5 h-2 rounded-full bg-gray-200 text-center text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-300"
+			>
+				<span class="text-white-600 font-semibold">INGAT</span>
+			</div>
+			<div
+				class="mb-2.5 h-2 max-w-[330px] rounded-full bg-gray-200 text-center text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-300"
+			>
+				<span class="font-semibold text-red-600">SEHANCUR-HANCURNYA</span>
+			</div>
+			<div class="mb-2.5 h-2 max-w-[300px] rounded-full bg-gray-200 dark:bg-gray-700"></div>
+		</div>
+	</section>
+	<section aria-label="Blog post list">
+		<h2 class="title mb-4 text-xl">Recent . . .</h2>
 		<ul class="space-y-4">
 			{
 				allPostsByDate.map((p) => (
 					<li class="grid gap-2 sm:grid-cols-[auto_1fr] sm:[&_q]:col-start-2">
-						{/* @ts-expect-error - issue with -> @astrojs/check@0.9.3 */}
 						<PostPreview post={p} />
 					</li>
 				))
