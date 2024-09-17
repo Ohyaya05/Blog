@@ -19,3 +19,5 @@ tags: ["pemahamantentangpesertadidik"]
 | C6                    | Mengkreasi      |
 
 - Indikator nantinya akan dapat menjadi Degree.
+
+![Pemahaman Peserta Didik](images/pemahamanpesertadidik.jpg)
