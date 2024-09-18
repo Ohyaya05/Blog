@@ -1,9 +1,12 @@
 ---
 title: "Prinsip Pengajaran dan Asesmen I di Sekolah Menengah Kejuruan"
-description: "Mulai Diri"
-publishDate: "12 Sept 2024"
+description: "Ruang Kolaborasi"
+publishDate: "17 Sept 2024"
 tags: ["prinsippengajarandanasesmen"]
 ---
 
-> **CAUTION:**  
-> Hanya Mengerjakan LMS, tidak ada catatan
+<span style="color: red;">Pembelajaran berdiferensiasi adalah proses pembelajaran yang dibuat sedemikian rupa sehingga siswa merasa tertantang untuk belajar.</span>
+
+
+- Guru harus menerapkan pembalajaran yang berpusat pada peserta didik
+- Harus ada Assesmen untuk mengukur pemahaman siswa dalam memahami materi 

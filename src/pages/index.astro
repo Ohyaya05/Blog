@@ -59,7 +59,7 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 	</section>
 	<section>
 		<div role="status" class="h2 max-w-sm animate-pulse">
-			<h2 class="title mb-4 text-xl font-bold text-blue-600">Reminder</h2>
+			<h2 class="text-black-600 title mb-4 text-xl font-bold">Reminder</h2>
 			<div
 				class="mb-4 h-2.5 w-48 rounded-full bg-gray-200 text-center text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-300"
 			>
@@ -85,14 +85,76 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 	</section>
 	<section aria-label="Blog post list">
 		<h2 class="title mb-4 text-xl">Recent . . .</h2>
-		<ul class="space-y-4">
-			{
-				allPostsByDate.map((p) => (
-					<li class="grid gap-2 sm:grid-cols-[auto_1fr] sm:[&_q]:col-start-2">
-						<PostPreview post={p} />
-					</li>
-				))
-			}
-		</ul>
+		<div class="grid gap-4">
+			<div class="grid grid-cols-5 gap-4">
+				<figure>
+					<a href="https://blog-ppg.vercel.app/tags/filosofipendidikanindonesia/" target="_blank">
+						<img
+							class="h-auto max-w-full rounded-lg"
+							src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+							alt="Filosofi Pendidikan"
+						/>
+					</a>
+					<a
+						href="https://blog-ppg.vercel.app/tags/filosofipendidikanindonesia/"
+						target="_blank"
+						class="mt-2 block text-center text-gray-700"
+					>
+						Filosofi Pendidikan
+					</a>
+				</figure>
+				<div>
+					<img
+						class="h-auto max-w-full rounded-lg"
+						src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+						alt=""
+					/>
+				</div>
+				<div>
+					<img
+						class="h-auto max-w-full rounded-lg"
+						src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+						alt=""
+					/>
+				</div>
+				<div>
+					<img
+						class="h-auto max-w-full rounded-lg"
+						src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+						alt=""
+					/>
+				</div>
+				<div>
+					<img
+						class="h-auto max-w-full rounded-lg"
+						src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
 	</section>
 </PageLayout>
+<style>
+	@keyframes colorChange {
+		0% {
+			color: #ff0000;
+		}
+		25% {
+			color: #00ff00;
+		}
+		/ 50% {
+			color: #0000ff;
+		}
+		75% {
+			color: #ffff00;
+		}
+		100% {
+			color: #ff0000;
+		}
+	}
+
+	.animated-text {
+		animation: colorChange 5s infinite;
+	}
+</style>
