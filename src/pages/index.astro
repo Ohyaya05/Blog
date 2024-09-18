@@ -8,7 +8,7 @@ const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
-const cactusTech: { desc: string; href: string; title: string }[] = [
+const cactusTech = [
 	{
 		desc: "Build fast websites, faster.",
 		href: "https://astro.build",
@@ -45,7 +45,7 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 		title: "Astro Icon",
 	},
 	{
-		desc: "Highly customisable source code & syntax highlighter",
+		desc: "Highly customizable source code & syntax highlighter.",
 		href: "https://expressive-code.com/",
 		title: "Expressive Code",
 	},
@@ -54,37 +54,14 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<p class="mb-4">PPG Prajabatan 2024 - Gempita Rizki Ramadhan</p>
+		<p class="mb-4">PPG Prajabatan 2024</p>
 		<SocialList />
 	</section>
 	<section>
-		<div role="status" class="h2 max-w-sm animate-pulse">
-			<h2 class="text-black-600 title mb-4 text-xl font-bold">Reminder</h2>
-			<div
-				class="mb-4 h-2.5 w-48 rounded-full bg-gray-200 text-center text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-			>
-				Layaknya Seorang Lelaki
-			</div>
-			<div
-				class="mb-2.5 h-2 max-w-[360px] rounded-full bg-gray-200 text-center text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-			>
-				berjuanglah <span class="font-semibold text-red-600">Sehancur-hancurnya</span>
-			</div>
-			<div
-				class="mb-2.5 h-2 rounded-full bg-gray-200 text-center text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-			>
-				<span class="text-white-600 font-semibold">INGAT</span>
-			</div>
-			<div
-				class="mb-2.5 h-2 max-w-[330px] rounded-full bg-gray-200 text-center text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-			>
-				<span class="font-semibold text-red-600">SEHANCUR-HANCURNYA</span>
-			</div>
-			<div class="mb-2.5 h-2 max-w-[300px] rounded-full bg-gray-200 dark:bg-gray-700"></div>
-		</div>
+		<span id="AboutDevTypeText" class="typeing"></span><span class="blinker">&#32;</span>
 	</section>
 	<section aria-label="Blog post list">
-		<h2 class="title mb-4 text-xl">Recent . . .</h2>
+		<h2 class="title mb-4 text-xl">Here 💥</h2>
 		<div class="grid gap-4">
 			<div class="grid grid-cols-5 gap-4">
 				<figure>
@@ -136,3 +113,61 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 		</div>
 	</section>
 </PageLayout>
+
+<style>
+	body {
+		background: black;
+	}
+
+	span {
+		color: green;
+		font-family: monospace;
+	}
+
+	.blinker {
+		opacity: 1;
+		margin-bottom: -2px;
+		height: 15px;
+		margin-left: -5px;
+		border-left: 7px solid black;
+		animation: blinker 0.9s steps(2, start) infinite;
+	}
+
+	@keyframes blinker {
+		to {
+			visibility: hidden;
+		}
+	}
+</style>
+
+<script>
+	var data = [
+		{
+			AboutDevTypeText:
+				"<span>Layaknya Seorang lelaki, berjuanglah sehancur-hancurnya<br><br>Ingat<br><br>Sehancur-Hancurnya !</span><br/><br/><br/>",
+		},
+	];
+
+	var allElements = document.getElementsByClassName("typeing");
+	for (var j = 0; j < allElements.length; j++) {
+		var currentElementId = allElements[j].id;
+		var currentElementIdContent = data[0][currentElementId];
+		var element = document.getElementById(currentElementId);
+		var devTypeText = currentElementIdContent;
+
+		// type code
+		var i = 0,
+			isTag,
+			text;
+		(function type() {
+			text = devTypeText.slice(0, ++i);
+			if (text === devTypeText) return;
+			element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
+			var char = text.slice(-1);
+			if (char === "<") isTag = true;
+			if (char === ">") isTag = false;
+			if (isTag) return type();
+			setTimeout(type, 60);
+		})();
+	}
+</script>
