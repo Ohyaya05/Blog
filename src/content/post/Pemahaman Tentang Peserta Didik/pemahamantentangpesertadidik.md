@@ -18,6 +18,10 @@ tags: ["pemahamantentangpesertadidik"]
 | C5                    | Mengevaluasi    |
 | C6                    | Mengkreasi      |
 
-- Indikator nantinya akan dapat menjadi Degree.
+
+- Degre nantinya akan menghasilkan indikator yang akan menjadi acuan bagi kisi-kisi -> instrument
 
 ![Pemahaman Peserta Didik](images/pemahamanpesertadidik.jpg)
+
+
+![Taksonomi Bloom](images/taksonomi.jpg)
